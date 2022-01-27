@@ -15,6 +15,6 @@
 #### 조원
 * 곽주혁 : 프론트 https://github.com/jh2277
 * 구현정 : 백엔드 https://github.com/KooHyunJung
-* 김현두 : 프론트 https://github.com/Kimhyeondu
-* 박진영 : 백엔드 https://github.com/jinyoung26
+* 김현두 : 백엔드 https://github.com/Kimhyeondu
+* 박진영 : 프론트 https://github.com/jinyoung26
 * 신동석 : 백엔드 https://github.com/dsshin99999
