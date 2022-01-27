@@ -1,8 +1,9 @@
 # mamison_team10
 ## NETFLIX Clone Coding
 ![GitHub last commit](https://img.shields.io/github/last-commit/jinyoung26/mamison_team10?color=blue&style=plastic)
+
 * 서비스 소개: NETFLIX와 같은 동영상 스트리밍 서비스를 제공하는 웹사이트
-* 필수 구현 사항:
+*  기술 스택: <img alt="Python" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>
 * 팀 약속
   - 하루 두 번 회의 - 오전 11시, 오후 5시
   - 막히면 물어보고 자주 소통하면서 진행하기
