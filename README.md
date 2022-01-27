@@ -1,6 +1,6 @@
 # mamison_team10
 ## NETFLIX Clone Coding
-![GitHub last commit](https://img.shields.io/github/last-commit/grolarkim/ML_project_team8?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/jinyoung26/mamison_team10?style=plastic)
 * 서비스 소개: NETFLIX와 같은 동영상 스트리밍 서비스를 제공하는 웹사이트
 * 필수 구현 사항:
 * 팀 약속
