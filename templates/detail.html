@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Main{% endblock %}
 
 {% block head %}
-{{ super() }}
-<link rel="stylesheet" href="/static/css/detail.css">
+
+ <link rel='stylesheet' href="{% static 'css/detail.css' %}" media='screen'>
 <script src="/static/js/detail.js"></script>
 {% endblock %}
 

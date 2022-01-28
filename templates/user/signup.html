@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Sign Up{% endblock %}
 
 {% block head %}
-{{ super() }}
-<link rel="stylesheet" href="/static/css/signup.css">
+
+ <link rel='stylesheet' href="{% static 'css/signup.css' %}" media='screen'>
 <script src="/static/js/signup.js"></script>
 {% endblock %}
 
 {% block main %}
+
+    <h1 class ="signup_h1">로그인 기능</h1>
 {% endblock %}
