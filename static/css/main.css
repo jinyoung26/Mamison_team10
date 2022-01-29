@@ -12,18 +12,37 @@
 /*}*/
 
 /* HEADER */
+
 .main {
   width: 100%;
-  height: 700px;
-  background-image: url("/static/img/back.gif");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column;
+  height: 3rem;
+}
+
+
+#base_header{
+  display:none;
+}
+#main-header-image{
+  position: relative;
+
+    width:100%;
+   height: 20rem;
+   background-image: url("/static/img/back.gif");
+
+  background-size:100% 100%;
+  align-items: center;
+}
+#mamiy-image{
+  position: absolute;
+  top:20%;
+   height: 10rem;
+
 }
 
 .main-header {
   width: 100%;
-  height: 80px;
-  padding: 20px 20px 0 20px;
   position: fixed;
   top: 0;
   display: grid;
@@ -32,6 +51,8 @@
   grid-template-areas:
    "a b b c . . . ";
   margin-bottom: 0px;
+  align-items: center;
+  text-align: center;
 }
 
 #logo {
@@ -73,13 +94,13 @@
   height: 35px;
 }
 
-#message {
-  width: 300px;
-  height: 300px;
-  padding: 400px 0 0 80px;
-  font-weight: bold;
-  font-size: x-large;
-}
+/*#message {*/
+/*  width: 300px;*/
+/*  height: 300px;*/
+/*  padding: 400px 0 0 80px;*/
+/*  font-weight: bold;*/
+/*  font-size: x-large;*/
+/*}*/
 
 /* MAIN CONTIANER */
 .main-container {
@@ -129,4 +150,149 @@
   padding: 20px;
   text-align: center;
   margin: 10px;
+}
+
+
+
+
+
+
+
+/*
+
+
+/*자동 추가 css*/
+
+
+/*레시피 li 스타일------------------------------------------------------------------------*/
+.rasipi_li_list {
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0 12px 40px 0;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+    text-align: -webkit-match-parent;
+}
+
+.rasipi_img_box {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+    text-align: -webkit-match-parent;
+}
+
+.rasipi_img {
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.rasipi-imgs {
+    max-width: 100%;
+    height: 200px;
+    vertical-align: middle;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    list-style: none;
+}
+
+.rasipi_commant_box {
+    padding: 10px 2px;
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+
+
+}
+
+.rasipi_commant {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.5;
+    margin: 0 0 6px 0;
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+    box-sizing: border-box;
+    height: 50px;
+
+}
+
+.name_box {
+    color: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    vertical-align: 0;
+    padding: 0 1px 7px 0;
+    font-weight: 300;
+
+}
+
+.name_img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin: 0 4px -2px 0;
+    vertical-align: text-bottom;
+    box-sizing: border-box;
+
+}
+
+.rasipi_poot_box {
+    vertical-align: super;
+    line-height: 1;
+    margin: 0 0 9px 0;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.heart_box {
+    vertical-align: 1px;
+    box-sizing: border-box;
+
+}
+
+.heart_count {
+    vertical-align: middle;
+    color: #999;
+    font-size: 13px;
+    margin-left: 2px;
+    font-weight: 300;
+    box-sizing: border-box;
+
+}
+
+#rasipi_container {
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-top: 20%;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    line-height: 1.42857143;
+}
+
+#rasipi_container>p{
+    color:red;
+}
+#recommend{
+    color:red;
 }

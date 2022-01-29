@@ -1,45 +1,44 @@
-function listing() {
-    alert("message")
-    $.ajax({
-        type: 'GET',
-        url: '/auto_recipe_write',
-        data: {},
-        success: function (response) {
-            alert("message2")
-            let rows = response['recipes']
-            for (let i = 0; i < rows.length; i++) {
-                let imgstyle = rows[i].select_one(' a > div')
-                let imgsrl = imgstyle['style']
-                list(imgsrl)
-                let src = imgsrl.split(');')[0]
-                src = src.split('url(')[1]
-                src = src.split('`')[1]
-                src = src.slice(0, -1);
-                src = src.slice(1)
-                let reple = rows[i].select_one('div.h_recipe_list_top > div.h_recipe_list_top_cont>p.h_recipe_list_top_cont_tit>a').text
-                let name = rows[i].select_one('div.h_recipe_list_top > div.h_recipe_list_top_cont > p.h_recipe_list_top_cont_name>a').text
-                let imga = rows[i].select_one('a>img')['src']
-               alert(name)
-                alert(imga)
-                alert(reple)
-                alert(src)
+let ras = [{
+    'img': 'back.gif',
+    'recipe_id': '마미',
+    'content': '오케이 계획대로 되고있어!',
+    'like_count': '1'
+}, {'img': 'gloves.PNG', 'recipe_id': '마미', 'content': '소년점프소년점프', 'like_count': '25'},
+    {'img': 'logo.PNG', 'recipe_id': '마미', 'content': '와다다다다다', 'like_count': '100'}, {
+        'img': 'mamiy_charic.png',
+        'recipe_id': '마미',
+        'content': '폭염에 복면쓰고 불구덩이에',
+        'like_count': '250'
+    }, {'img': 'logo.PNG', 'recipe_id': '마미', 'content': '박힌 내맘을 알아?', 'like_count': '300'}]
 
-                let temp = `<li class ="rasipi_li_list">
+
+rasipi(ras)
+
+
+function rasipi(data) {
+    let b = 1
+    for (a of data) {
+        let imgsrc = a['img']
+        let name = a['recipe_id']
+        let comment = a['content']
+        let like = a['like_count']
+        let temp = `<li class ="rasipi_li_list">
                         <div class = "rasipi_img_box">
                             <a class ="rasipi_img">
-                                  <img class ="rasipi-imgs" src = ../static/img/${src} >
+                                  <img class ="rasipi-imgs" src = ../img/${imgsrc} >
+
                             </a>
                         </div>
                         <div class =rasipi_comant_box">
                             <div class="rasipi_commant">
-                                      ${reple}
+                                      ${comment}
                            </div>
                            <div class = "name_box">
-                                <img class ="name_img" src =../static/img/${imga}> "${name}"
+                                <img class ="name_img" src =../img/${imgsrc}> "${name}"
                            </div>
                            <div class="rasipi_poot_box">
                                 <span class ="heart_box" >
-                                    <img  style="width: 14px; margin: 0; " src= ../static/img/like@4x.png>
+                                    <img  style="width: 14px; margin: 0; " src= ../img/like@4x.png>
                                     공감수
                                 </span>
                                 <span class ="heart_count">
@@ -54,9 +53,14 @@ function listing() {
 
 
                 </li>`
-                $('#rasipi_container').append(temp)
 
-            }
-        }
-    })
+        console.log(temp)
+        console.log(document.getElementById('rasipi_container'))
+        $('#rasipi_container').append(temp)
+        b++
+    }
+
 }
+
+let dialog = document.getElementById('dialog');
+

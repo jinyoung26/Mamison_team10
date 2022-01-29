@@ -4,17 +4,20 @@
 
 {% block head %}
 
- <link rel='stylesheet' href="{% static 'css/main.css' %}" media='screen'>
-<script src="/static/js/main.js"></script>
+    <link rel='stylesheet' href="{% static 'css/main.css' %}" media='screen'>
+    <script src="/static/js/main.js"></script>
 {% endblock %}
 
 {% block main %}
-{#     <ul id=main_container>#}
-{##}
-{#        <!--   <div class ="rasipi_item"><div class ="rasipi_main"><p>fweffffffffffffffff</p></div></div>-->#}
-{#    </ul>#}
+    {#     <ul id=main_container>#}
+    {##}
+    {#        <!--   <div class ="rasipi_item"><div class ="rasipi_main"><p>fweffffffffffffffff</p></div></div>-->#}
+    {#    </ul>#}
 
     <!-- HEADER -->
+
+
+
     <div class="main">
         <div class="main-header">
             <div id="logo" href="/"><img src="../static/img/logo.png" alt="Logo Image"></div>
@@ -30,13 +33,25 @@
                 <a href="#">My page</a>
             </nav>
         </div>
-        <div id="message">
-            MommySon comment 넣기 <br> 현두님의 마미손 활용 기대합니다!
-        </div>
     </div>
+    <div id="main-header-image">
+
+        <img id="mamiy-image" src="../static/img/mamiy_charic.png">
+
+
+    </div>
+
+
+    {#        <div id="message">#}
+    {#            MommySon comment 넣기 <br> 현두님의 마미손 활용 기대합니다!#}
+    {#        </div>#}
     <!-- END OF HEADER -->
 
     <!-- MAIN CONTAINER -->
+    <div id= "rasipi_container">
+        <p>fdsaf</p>
+        <button type="button" class="btn btn-primary">Primary</button>
+    </div>
     <div class="main-container">
         <h1 id="recommend">회원님을 위한 추천 메뉴</h1>
         <div class="box">
@@ -103,11 +118,12 @@
             <a href=""><img src="" alt="6"></a>
             <a href=""><img src="" alt="7"></a>
         </div>
-    <!-- END OF MAIN CONTAINER -->
-    <div class="footer">
-        <p>&copy 2022 Mommyson Team 10 Inc.</p>
-        <p>Babeun Mukgo Daninya</p>
+        <!-- END OF MAIN CONTAINER -->
+        <div class="footer">
+            <p>&copy 2022 Mommyson Team 10 Inc.</p>
+            <p>Babeun Mukgo Daninya</p>
+        </div>
     </div>
-</body>
+    <script src="{% static 'js/main.js' %}"></script>
 
 {% endblock %}
