@@ -1,27 +1,20 @@
 from django.shortcuts import render
+from .models import tweetmodel
 from django.contrib.auth.decorators import login_required  ## 함수위에 붙어있음 로근인이 되어있어야 실행가능
 
-#### 크롤링
-import requests
-import pandas as pd
-from newspaper import Article
-from bs4 import BeautifulSoup
-###크롤링
+# #### 크롤링
+# import requests
+# import pandas as pd
+# from newspaper import Article
+# from bs4 import BeautifulSoup
+# ###크롤링
 
 
 # Create your views here.
 def main(request):
-    # temp_url = 'https://terms.naver.com/search.naver?query=123&searchType=text&dicType=&subject='
-    # temp_url1 = temp_url.split('123')[0]
-    # temp_url2 = temp_url.split('123')[1]
-    # url = (f'{temp_url1}{data}{temp_url2}')
-    # print(url)
-    # data = requests.get(url, headers=headers)
-    # soup = BeautifulSoup(data.text, 'html.parser')
-    # info = soup.select_one('#content > div:nth-child(3) > ul > li:nth-child(1) > div.info_area > p').text
-    # return info
+    all_tweet = tweetmodel.objects.all()
 
-    return render(request, 'main.html')
+    return render(request, 'main.html', {"tweet": all_tweet})
 
 
 # @login_required
