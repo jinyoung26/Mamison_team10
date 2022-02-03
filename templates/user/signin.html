@@ -4,10 +4,54 @@
 
 {% block head %}
 
- <link rel='stylesheet' href="{% static 'css/signin.css' %}" media='screen'>
-<script src="/static/js/signin.js"></script>
+    <link rel='stylesheet' href="{% static 'css/signin.css' %}" media='screen'>
+
 {% endblock %}
 
 {% block main %}
-     <h1 class ="signin_h1">로그인 기능</h1>
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="#" class="form" id="form1">
+			<h2 class="form__title">회원가입</h2>
+			<input type="text" placeholder="ID" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+            <input type="password2" placeholder="Password2" class="input" />
+            <input type="info" placeholder="내 소개" class="input" />
+			<button class="btn">Sign Up</button>
+		</form>
+	</div>
+
+	<!-- Sign In -->
+	<div class="container__form container--signin">
+		<form action="#" class="form" id="form2">
+			<h2 class="form__title">로그인</h2>
+			<input type="text" placeholder="ID" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<a href="#" class="link">Forgot your password?</a>
+			<button class="btn">Sign In</button>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{#자바스크립트의 기본 위치는 js 파일에 따로 넣지않는 이상 무조건 최 하단에 위치하는게 맞다!#}
+<script src="/static/js/signin.js"></script>
+
+
+
+</div>
+
+
 {% endblock %}
