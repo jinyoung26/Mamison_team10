@@ -1,9 +1,146 @@
-#left-wrapper {
-    width: 500px;
-    background-color: indianred;
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+   "a b b c . . . ";
+    margin-bottom: 0px;
+    align-items: center;
+    text-align: center;
 }
 
-#right-wrapper {
-    width: 50%;
-    background-color: #666666;
+#logo {
+    grid-area: a;
+    object-fit: cover;
+    width: 100px;
+    max-height: 100%;
+    padding-left: 30px;
+    padding-top: 0px;
+}
+
+#logo img {
+    height: 35px;
+}
+
+#left-nav {
+    grid-area: b;
+    padding: 0 30px 0 15px;
+}
+
+#left-nav a {
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+}
+
+#right-nav {
+    grid-area: c;
+    padding: 0 40px 0 40px;
+}
+
+#right-nav a {
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  padding-top: 50px;
+  display: flex;
+}
+
+/* Columns */
+.left-column {
+  width: 65%;
+  text-align: center;
+  position: relative;
+}
+
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+
+/* Left Column */
+.left-column img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+/* food-content */
+.food-content {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.food-content span {
+  font-size: 20px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.food-content h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.food-content p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+.ingredient {
+  margin-bottom: 30px;
+}
+
+.ingredient p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+/* like box */
+.like-box {
+  display: flex;
+  align-items: center;
+}
+
+.like-box span {
+  font-size: 20px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+    padding: 10px;
+}
+
+.like-box img {
+    padding: 10px;
+}
+
+.cart-btn {
+  display: inline-block;
+  background-color: #8592e6;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #7986db;
 }

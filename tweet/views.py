@@ -28,3 +28,6 @@ def main(request):
 
 def detail_view(request):
     return render(request, 'detail.html')
+
+def detail_view(request):
+    return render(request, 'detail.html')
