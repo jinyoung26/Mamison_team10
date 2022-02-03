@@ -1,0 +1,9 @@
+#left-wrapper {
+    width: 500px;
+    background-color: indianred;
+}
+
+#right-wrapper {
+    width: 50%;
+    background-color: #666666;
+}

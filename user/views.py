@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 
 # Create your views here.
 
-
 def sign_in_view(request):
     return render(request, 'user/signin.html')
 
