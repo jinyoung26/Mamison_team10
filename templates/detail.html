@@ -5,7 +5,7 @@
 {% block head %}
 
  <link rel='stylesheet' href="{% static 'css/detail.css' %}" media='screen'>
-<script src="/static/js/detail.js"></script>
+
 {% endblock %}
 
 {% block main %}
@@ -27,24 +27,25 @@
     </div>
     <main class="container">
         <div class="left-column">
-            <img src="/static/img/pikachu2.png" alt="음식 사진">
+            <img src="{{ tweet.img_src }}" alt="음식 사진">
         </div>
         <div class="right-column">
             <div class="food-content">
-                <span>음식 분류</span>
-                <h1>음식 이름</h1>
-                <p>음식 설명</p>
+                <span>{{tag}}</span>
+                <h1>{{ tweet.title}}</h1>
+                <p>{{ tweet.des}}</p>
             </div>
             <div class="ingredient">
                 <span>재료</span>
-                <p>음식 재료 나열</p>
+                <p>{{ tweet.ing}}</p>
             </div>
             <div class="like-box">
                 <img src="/static/img/like@3x.png"
                      onclick="this.src=this.src.match(/like@3x/)?'../static/img/like3@3x.png':'../static/img/like@3x.png';">
-                <span>키워드</span>
+                <span>{{ tag }}</span>
                 <a href="#" class="cart-btn">댓글</a>
             </div>
         </div>
     </main>
+    <script src="{% static 'js/betail.js' %}"></script>
 {% endblock %}
