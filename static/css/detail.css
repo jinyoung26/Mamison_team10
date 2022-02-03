@@ -1,3 +1,13 @@
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url("/static/img/table.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
 .main-header {
     width: 100%;
     position: fixed;
@@ -49,11 +59,18 @@
 
 .container {
   max-width: 1200px;
-  height: 1000px;
+  height: 700px;
   margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
   padding: 15px;
   padding-top: 50px;
   display: flex;
+    background-color: white;
+/*    background-image: url("/static/img/grill.gif");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% 100%;*/
+/*    background-color: ;*/
 }
 
 /* Columns */
@@ -113,17 +130,17 @@
   line-height: 24px;
 }
 
-/* like box */
+/* Product Price */
 .like-box {
   display: flex;
   align-items: center;
 }
 
 .like-box span {
-  font-size: 20px;
-  font-weight: 300;
-  color: #43474D;
-  margin-right: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
     padding: 10px;
 }
 
