@@ -25,3 +25,9 @@ def main(request):
 #         return render(request, "tweet/tweet_detail.html", {"tweet": my_tweet, 'comment': all_comment})
 #
 #
+
+def detail_view(request):
+    return render(request, 'detail.html')
+
+def detail_view(request):
+    return render(request, 'detail.html')

@@ -16,8 +16,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-
+    height: 100%;
+    /*text-align: center;*/
+    /*align-items: center;*/
 }
+
 #base_header {
     background-color: white;
     width: 100%;
