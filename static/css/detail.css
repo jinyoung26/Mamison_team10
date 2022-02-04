@@ -2,7 +2,7 @@ body {
     font-family: 'Gowun Dodum', sans-serif;
     background-image:
             linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url("/static/img/table.gif");
+            url("/static/img/egg.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
