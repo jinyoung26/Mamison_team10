@@ -12,13 +12,14 @@ def intro(request):
 
 
 def sign_up_view(request):
-    if request.method == 'GET':
-        user = request.user.is_authenticated
-        if user:
-            return redirect('/')
-        else:
-            return render(request, 'user/signin.html')
-    elif request.method == 'POST':
+    # 회원가입 로그인 화면이 같은 HTML임으로
+    # if request.method == 'GET':
+    #     user = request.user.is_authenticated
+    #     if user:
+    #         return redirect('/')
+    #     else:
+    #         return render(request, 'user/signin.html')
+    if request.method == 'POST':
         email = request.POST.get('email', '')
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
@@ -33,7 +34,7 @@ def sign_up_view(request):
             elif re.search('[0-9]+', password) is None or re.search('[a-zA-Z]+', password) is None:
                 return render(request, 'user/signin.html', {'error': 'password 형식은 영문,숫자 포함 7~20자 입니다.'})
             elif password != password2:
-                return render(request, 'user/signup.html', {'error': 'password 확인 해 주세요!'})
+                return render(request, 'user/signin.html', {'error': 'password 확인 해 주세요!'})
             if re.search('[0-9]+', username) is None or re.search('[a-zA-Z]+', username) is None:
                 return render(request, 'user/signin.html', {'error': 'ID에 영문,숫자는 필수입니다.'})
 
@@ -51,24 +52,27 @@ def sign_up_view(request):
 
 
 def sign_in_view(request):
-    # 회원가입 로그인 화면이 같은 HTML임으로
-    # if request.method == 'GET':
-    #     user = request.user.is_authenticated
-    #     if user:
-    #         return redirect('/')
-    #     else:
-    #         return render(request, 'user/signin.html')
-    if request.method == 'POST':
+    if request.method == 'GET':
+        user = request.user.is_authenticated
+        if user:
+            return redirect('/main')
+        else:
+            return render(request, 'user/signin.html')
+    elif request.method == 'POST':
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
 
         true_user = auth.authenticate(request, username=username, password=password)
         if true_user is not None:
             auth.login(request, true_user)
-            return redirect('/')
+            return redirect('/main')
         else:
             return render(request, 'user/signin.html', {'error': ' ID 또는 패스워드를 확인해주세요!'})
 
+
+def accounts_login(request):
+    if request.method == 'GET':
+        return render(request, 'user/signin.html')
 
 
 @login_required
