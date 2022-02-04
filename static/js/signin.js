@@ -1,7 +1,7 @@
 const signInBtn = document.getElementById("signIn");
 const signUpBtn = document.getElementById("signUp");
-const fistForm = document.getElementById("form1");
-const secondForm = document.getElementById("form2");
+const fistForm = document.getElementById("sign_up_form");
+const secondForm = document.getElementById("sign_in_form");
 const container = document.querySelector(".container");
 
 signInBtn.addEventListener("click", () => {
