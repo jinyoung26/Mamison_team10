@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tweet',
-    'user'
+    'user',
+    'crispy_forms',
 ]
+
+# crispy_forms UserAPP 필요 코드
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,4 +131,20 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# ============== UserAPP 필요한 코드 ============== #
 AUTH_USER_MODEL = 'user.UserModel'
+
+# 비번 리셋 email 보내기 위한 설정
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# gmail 통신 포트
+EMAIL_PORT = '587'
+# Email 전송
+EMAIL_HOST = 'smtp.gmail.com'
+# 발신할 이메일
+EMAIL_HOST_USER = 'mommyson1010@gmail.com'
+# 발신할 메일 password
+EMAIL_HOST_PASSWORD = 'mommyson5959!@'
+# TLS 보안 방법
+EMAIL_USE_TLS = True
+# 사이트와 관련한 자동 응답 받을 이메일 주소
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
