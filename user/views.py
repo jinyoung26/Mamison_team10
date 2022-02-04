@@ -12,19 +12,14 @@ def intro(request):
 
 
 def sign_up_view(request):
-    # 회원가입 로그인 화면이 같은 HTML임으로
-    # if request.method == 'GET':
-    #     user = request.user.is_authenticated
-    #     if user:
-    #         return redirect('/')
-    #     else:
-    #         return render(request, 'user/signin.html')
-    if request.method == 'POST':
+    if request.method == 'GET':
+        return redirect('/sign-in')
+    elif request.method == 'POST':
         email = request.POST.get('email', '')
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
         password2 = request.POST.get('password2', '')
-        bio = request.POST.get('bio', '')
+        # bio = request.POST.get('bio', '')
 
         if email == '' or username == '' or password == '':
             return render(request, 'user/signup.html', {'error': '빈 칸에 내용을 입력해 주세요!'})
@@ -40,6 +35,7 @@ def sign_up_view(request):
 
             exist_user = get_user_model().objects.filter(username=username)
             exist_email = get_user_model().objects.filter(email=email)
+            bio = "안녕하세요! 오늘의 마미손입니다!"
 
             if exist_email:
                 return render(request, 'user/signin.html', {'error': '이미 사용 중인 email입니다.'})
