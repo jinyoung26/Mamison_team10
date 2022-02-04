@@ -12,23 +12,35 @@
 <div class="container right-panel-active">
 	<!-- Sign Up -->
 	<div class="container__form container--signup">
-		<form action="#" class="form" id="form1">
+		<form action="#" class="form" id="sign_up_form" method="post">
 			<h2 class="form__title">회원가입</h2>
-			<input type="text" placeholder="ID" class="input" />
-			<input type="password" placeholder="Password" class="input" />
-            <input type="password2" placeholder="Password2" class="input" />
-            <input type="info" placeholder="내 소개" class="input" />
+            {% csrf_token %}
+                <input type="text" placeholder="ID" class="input" />
+                <input type="email" placeholder="email" class="input" />
+                <input type="password" placeholder="Password" class="input" />
+                <input type="password2" placeholder="Password2" class="input" />
+            {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+            {% endif %}
 			<button class="btn">Sign Up</button>
 		</form>
 	</div>
 
 	<!-- Sign In -->
 	<div class="container__form container--signin">
-		<form action="#" class="form" id="form2">
+		<form action="#" class="form" id="sign_in_form" method="post">
 			<h2 class="form__title">로그인</h2>
+            {% csrf_token %}
 			<input type="text" placeholder="ID" class="input" />
 			<input type="password" placeholder="Password" class="input" />
 			<a href="#" class="link">Forgot your password?</a>
+            {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+            {% endif %}
 			<button class="btn">Sign In</button>
 		</form>
 	</div>
