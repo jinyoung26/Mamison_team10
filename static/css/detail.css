@@ -2,75 +2,75 @@ body {
     font-family: 'Gowun Dodum', sans-serif;
     background-image:
             linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url("/static/img/table.gif");
+            url("/static/img/egg.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 
 .main-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas:
+  width: 100%;
+  height: 80px;
+  padding: 20px 20px 0 20px;
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-gap:5px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
    "a b b c . . . ";
-    margin-bottom: 0px;
-    align-items: center;
-    text-align: center;
+  margin-bottom: 20px;
 }
 
 #logo {
-    grid-area: a;
-    object-fit: cover;
-    width: 100px;
-    max-height: 100%;
-    padding-left: 30px;
-    padding-top: 0px;
+  grid-area: a;
+  object-fit: cover;
+  width: 100px;
+  max-height: 100%;
+  padding-left: 30px;
+  padding-top: 0px;
 }
 
-#logo img {
-    height: 35px;
+#logo img{
+  height: 35px;
 }
 
 #left-nav {
-    grid-area: b;
-    padding: 0 30px 0 15px;
+  grid-area: b;
+  padding: 0 30px 0 15px;
 }
 
 #left-nav a {
-    color: black;
-    text-decoration: none;
-    margin: 8px;
+  color: black;
+  text-decoration: none;
+  margin: 8px;
 }
 
 #right-nav {
-    grid-area: c;
-    padding: 0 40px 0 40px;
+  grid-area: c;
+  padding: 0 40px 0 40px;
 }
 
 #right-nav a {
-    color: black;
-    text-decoration: none;
-    margin: 5px;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+
+#right-nav img {
+  height: 35px;
 }
 
 .container {
-  max-width: 1200px;
-  height: 700px;
-  margin: 0 auto;
-    margin-top: 50px;
+    max-width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 60px;
     margin-bottom: 50px;
-  padding: 15px;
-  padding-top: 50px;
-  display: flex;
+    padding: 15px;
+    padding-top: 50px;
+    display: flex;
     background-color: white;
-/*    background-image: url("/static/img/grill.gif");*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: 100% 100%;*/
-/*    background-color: ;*/
 }
 
 /* Columns */
@@ -78,6 +78,8 @@ body {
   width: 65%;
   text-align: center;
   position: relative;
+    margin-right: 40px;
+    margin-top: 30px;
 }
 
 .right-column {
@@ -106,11 +108,15 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .food-content h1 {
-  font-weight: 300;
-  font-size: 52px;
-  color: #43484D;
-  letter-spacing: -2px;
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .food-content p {
   font-size: 16px;
