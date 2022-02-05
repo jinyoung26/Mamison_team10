@@ -87,7 +87,7 @@
     {#    #########################################################}
 
 
-    <div class="cate_list"role="tablist">
+    <div class="cate_list" role="tablist">
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','전체')" class="active">전체</a> <a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat4','밑반찬')">밑반찬</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','메인반찬')">메인반찬</a><a aria-selected="false"  role="tab"
@@ -121,9 +121,9 @@
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','22')">기타</a>
     </div>
 
-    <div class="cate_list"role="tablist">
+    <div class="cate_list" role="tablist">
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','전체')" class="active">전체</a>
-        <a aria-selected="false"  role="tab" aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','소고기')">소고기</a> <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','71')">돼지고기</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','소고기')">소고기</a> <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','71')">돼지고기</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','닭고기')">닭고기</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','23')">육류</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','채소류')">채소류</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','24')">해물류</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','50')">달걀/유제품</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','33')">가공식품류</a>
@@ -133,7 +133,7 @@
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','26')">곡류</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','34')">기타</a>
     </div>
 
-    <div class="cate_list"role="tablist">
+    <div class="cate_list" role="tablist">
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','')" class="active">전체</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','6')">볶음</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','1')">끓이기</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','7')">부침</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','36')">조림</a>
@@ -145,31 +145,30 @@
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','37')">회</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','11')">기타</a>
     </div>
     <div id="rasipi_container">
-    {% for tw in tweet%}
-
-    <li class ="rasipi_li_list">
-        <div class="rasipi_img_box">
-            <a class="rasipi_img" href="/detail/{{ tw.id }}">
-                <img class="rasipi-imgs" src={{ tw.img_src }}>
-            </a>
-        </div>
-        <div class=rasipi_comant_box">
-            <div class="rasipi_commant">
-                {{ tw.title }}
-            </div>
-            <div class="name_box">
-                <img class="name_img" src={{ tw.img_src }}> "${name}"
-            </div>
-            <div class="rasipi_poot_box">
+        {% for tw in tweet %}
+            <li class="rasipi_li_list">
+                <div class="rasipi_img_box">
+                    <a class="rasipi_img" href="/detail/{{ tw.id }}">
+                        <img class="rasipi-imgs" src={{ tw.img_src }}>
+                    </a>
+                </div>
+                <div class=rasipi_comant_box">
+                    <div class="rasipi_commant">
+                        {{ tw.title }}
+                    </div>
+                    <div class="name_box">
+                        <img class="name_img" src={{ tw.img_src }}> "${name}"
+                    </div>
+                    <div class="rasipi_poot_box">
                                 <span class="heart_box">
                                     <img style="width: 14px; margin: 0; " src=../static/img/like@4x.png>
                                     공감수
                                 </span>
-                <span class="heart_count"> ${like}   </span>
-            </div>
-        </div>
-    </li>
-    {% endfor %}
+                        <span class="heart_count"> ${like}   </span>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
     </div>
 
 
