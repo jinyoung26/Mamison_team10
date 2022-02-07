@@ -44,16 +44,17 @@
 		<form action="/sign-in/" class="sign" id="sign_up_form" method="post">
 			<h2 class="up_title">회원가입</h2>
             {% csrf_token %}
-                <input type="text" placeholder="ID" class="input" />
-                <input type="email" placeholder="email" class="input" />
-                <input type="password" placeholder="Password" class="input" />
-                <input type="password2" placeholder="Password2" class="input" />
+			<h2 class="form__title">회원가입</h2>
+                <input type="text" placeholder="ID" class="input" name="username">
+                <input type="email" placeholder="email" class="input" name="email">
+                <input type="password" placeholder="Password" class="input" name="password" >
+                <input type="password" placeholder="Password2" class="input" name="password2">
             {% if error %}
                     <div class="alert alert-danger" role="alert">
                         {{ error }}
                     </div>
             {% endif %}
-			<button class="btn">Sign Up</button>
+			<button type="submit" class="btn">Sign Up</button>
 		</form>
 	</div>
 
@@ -62,15 +63,16 @@
 		<form action="#" class="sign" id="sign_in_form" method="post">
 			<h2 class="up_title">로그인</h2>
             {% csrf_token %}
-			<input type="text" placeholder="ID" class="input" />
-			<input type="password" placeholder="Password" class="input" />
-			<a href="#" class="link">Forgot your password?</a>
+			<h2 class="form__title">로그인</h2>
+			<input type="text" placeholder="ID" class="input" name="username">
+			<input type="password" placeholder="Password" class="input" name="password">
+			<a href="/password_reset/" class="link">Forgot your password?</a>
             {% if error %}
                     <div class="alert alert-danger" role="alert">
                         {{ error }}
                     </div>
             {% endif %}
-			<button class="btn">Sign In</button>
+			<button type="submit" class="btn">Sign In</button>
 		</form>
 	</div>
 

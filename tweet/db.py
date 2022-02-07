@@ -5,7 +5,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Mamison_team10.settings")
 
 import django
 django.setup()
-
 from tweet.models import tweetmodel
 with open('../static/model/rcp_data_v5.csv','rt',encoding='UTF8') as f:
     dr = csv.DictReader(f)
