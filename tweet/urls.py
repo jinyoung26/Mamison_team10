@@ -8,4 +8,5 @@ urlpatterns = [
     path('main/', views.taglistview.as_view()),
     path('detail/comment/<int:id>', views.write_comment, name='write-comment'),
     path('tweet/comment/delete/<int:id>', views.delete_comment, name='delete-comment'),
+    path('mypage/', views.mypage, name='mypage'),
 ]
