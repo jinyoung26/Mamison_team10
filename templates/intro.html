@@ -28,21 +28,22 @@
             </div>
             <br>
             <div id="mid_container">
-                <dvi class="mid_wrap">
+                <div class="mid_wrap">
                     <p class="font">우리는 <br>여러분이 <br>밥은 먹고 다니는지 <br>궁금합니다.</p>
                     <div class="signin_up_wrap">
                         <br>
-                        <button type="button" class="btn btn-light">로그인</button>
-                        <button type="button" class="btn btn-light">회원가입</button>
+                        <button type="button" class="btn btn-light" onclick=location.href="/sign-in">로그인</button>
+                        <button type="button" class="btn btn-light" onclick=location.href="/sign-up">회원가입</button>
                     </div>
-                </dvi>
-                <img src="/static/img/gloves2.png" class="logo" alt="logo">
+                </div>
+                <img src="/static/img/gloves.png" class="logo" alt="logo">
             </div>
 
             <div id="bottom_container"></div>
 
         </div>
     </div>
+    <script src="{% static 'js/intro.js' %}"></script>
 
 
 {% endblock %}

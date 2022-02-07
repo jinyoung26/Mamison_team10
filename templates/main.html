@@ -5,7 +5,6 @@
 {% block head %}
 
     <link rel='stylesheet' href="{% static 'css/main.css' %}" media='screen'>
-    <script src="/static/js/main.js"></script>
 {% endblock %}
 
 {% block main %}
@@ -88,93 +87,92 @@
     {#    #########################################################}
 
 
-    <div class="cate_list">
-        <a href="javascript:goSearchRecipe('cat4','')" class="active">전체</a> <a
-            href="javascript:goSearchRecipe('cat4','63')">밑반찬</a>
-        <a href="javascript:goSearchRecipe('cat4','56')">메인반찬</a><a
-            href="javascript:goSearchRecipe('cat4','54')">국/탕</a>
-        <a href="javascript:goSearchRecipe('cat4','55')">찌개</a><a href="javascript:goSearchRecipe('cat4','60')">디저트</a>
-        <a href="javascript:goSearchRecipe('cat4','53')">면/만두</a><a
+    <div class="cate_list" role="tablist">
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','전체')" class="active">전체</a> <a aria-selected="false"  role="tab"
+            href="javascript:goSearchRecipe('cat4','밑반찬')">밑반찬</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','메인반찬')">메인반찬</a><a aria-selected="false"  role="tab"
+            href="javascript:goSearchRecipe('cat4','국/탕')">국/탕</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','찌개')">찌개</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','60')">디저트</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','면')">면/만두</a><a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat4','52')">밥/죽/떡</a>
-        <a href="javascript:goSearchRecipe('cat4','61')">퓨전</a><a
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','퓨전')">퓨전</a><a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat4','57')">김치/젓갈/장류</a>
-        <a href="javascript:goSearchRecipe('cat4','58')">양념/소스/잼</a><a
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','58')">양념/소스/잼</a><a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat4','65')">양식</a>
-        <a href="javascript:goSearchRecipe('cat4','64')">샐러드</a><a href="javascript:goSearchRecipe('cat4','68')">스프</a>
-        <a href="javascript:goSearchRecipe('cat4','66')">빵</a><a href="javascript:goSearchRecipe('cat4','69')">과자</a>
-        <a href="javascript:goSearchRecipe('cat4','59')">차/음료/술</a><a
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','64')">샐러드</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','68')">스프</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','66')">빵</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','69')">과자</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','59')">차/음료/술</a><a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat4','62')">기타</a>
     </div>
 
-    <div class="cate_list">
-        <a href="javascript:goSearchRecipe('cat2','')" class="active">전체</a> <a
-            href="javascript:goSearchRecipe('cat2','12')">일상</a>
-        <a href="javascript:goSearchRecipe('cat2','18')">초스피드</a> <a
-            href="javascript:goSearchRecipe('cat2','13')">손님접대</a>
-        <a href="javascript:goSearchRecipe('cat2','19')">술안주</a> <a
+    <div class="cate_list" role="tablist">
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','전체')" class="active">전체</a> <a aria-selected="false"  role="tab"
+            href="javascript:goSearchRecipe('cat2','일상')">일상</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','초스피드')">초스피드</a> <a aria-selected="false"  role="tab"
+            href="javascript:goSearchRecipe('cat2','손님접대')">손님접대</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','술안주')">술안주</a> <a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat2','21')">다이어트</a>
-        <a href="javascript:goSearchRecipe('cat2','15')">도시락</a> <a
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','15')">도시락</a> <a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat2','43')">영양식</a>
-        <a href="javascript:goSearchRecipe('cat2','17')">간식</a><a href="javascript:goSearchRecipe('cat2','45')">야식</a>
-        <a href="javascript:goSearchRecipe('cat2','20')">푸드스타일링</a> <a
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','17')">간식</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','45')">야식</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','20')">푸드스타일링</a> <a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat2','46')">해장</a>
-        <a href="javascript:goSearchRecipe('cat2','44')">명절</a> <a href="javascript:goSearchRecipe('cat2','14')">이유식</a>
-        <a href="javascript:goSearchRecipe('cat2','22')">기타</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','명절')">명절</a> <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','14')">이유식</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat2','22')">기타</a>
     </div>
 
-    <div class="cate_list">
-        <a href="javascript:goSearchRecipe('cat3','')" class="active">전체</a>
-        <a href="javascript:goSearchRecipe('cat3','70')">소고기</a> <a href="javascript:goSearchRecipe('cat3','71')">돼지고기</a>
-        <a href="javascript:goSearchRecipe('cat3','72')">닭고기</a><a href="javascript:goSearchRecipe('cat3','23')">육류</a>
-        <a href="javascript:goSearchRecipe('cat3','28')">채소류</a><a href="javascript:goSearchRecipe('cat3','24')">해물류</a>
-        <a href="javascript:goSearchRecipe('cat3','50')">달걀/유제품</a><a href="javascript:goSearchRecipe('cat3','33')">가공식품류</a>
-        <a href="javascript:goSearchRecipe('cat3','47')">쌀</a><a href="javascript:goSearchRecipe('cat3','32')">밀가루</a>
-        <a href="javascript:goSearchRecipe('cat3','25')">건어물류</a><a  href="javascript:goSearchRecipe('cat3','31')">버섯류</a>
-        <a href="javascript:goSearchRecipe('cat3','48')">과일류</a><a href="javascript:goSearchRecipe('cat3','27')">콩/견과류</a>
-        <a href="javascript:goSearchRecipe('cat3','26')">곡류</a><a href="javascript:goSearchRecipe('cat3','34')">기타</a>
+    <div class="cate_list" role="tablist">
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','전체')" class="active">전체</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','소고기')">소고기</a> <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','71')">돼지고기</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','닭고기')">닭고기</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','23')">육류</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','채소류')">채소류</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','24')">해물류</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','50')">달걀/유제품</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','33')">가공식품류</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','47')">쌀</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','32')">밀가루</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','25')">건어물류</a><a aria-selected="false"  role="tab"  href="javascript:goSearchRecipe('cat3','31')">버섯류</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','48')">과일류</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','27')">콩/견과류</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','26')">곡류</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat3','34')">기타</a>
     </div>
 
-    <div class="cate_list">
-        <a href="javascript:goSearchRecipe('cat1','')" class="active">전체</a>
-        <a href="javascript:goSearchRecipe('cat1','6')">볶음</a><a href="javascript:goSearchRecipe('cat1','1')">끓이기</a>
-        <a href="javascript:goSearchRecipe('cat1','7')">부침</a><a href="javascript:goSearchRecipe('cat1','36')">조림</a>
-        <a href="javascript:goSearchRecipe('cat1','41')">무침</a>
-        <a href="javascript:goSearchRecipe('cat1','42')">비빔</a><a href="javascript:goSearchRecipe('cat1','8')">찜</a>
-        <a href="javascript:goSearchRecipe('cat1','10')">절임</a><a href="javascript:goSearchRecipe('cat1','9')">튀김</a>
-        <a href="javascript:goSearchRecipe('cat1','38')">삶기</a>
-        <a href="javascript:goSearchRecipe('cat1','67')">굽기</a><a href="javascript:goSearchRecipe('cat1','39')">데치기</a>
-        <a href="javascript:goSearchRecipe('cat1','37')">회</a><a href="javascript:goSearchRecipe('cat1','11')">기타</a>
+    <div class="cate_list" role="tablist">
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','')" class="active">전체</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','6')">볶음</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','1')">끓이기</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','7')">부침</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','36')">조림</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','41')">무침</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','42')">비빔</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','8')">찜</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','10')">절임</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','9')">튀김</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','38')">삶기</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','67')">굽기</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','39')">데치기</a>
+        <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','37')">회</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','11')">기타</a>
     </div>
     <div id="rasipi_container">
-    {% for tw in tweet%}
-
-    <li class ="rasipi_li_list">
-        <div class="rasipi_img_box">
-            <a class="rasipi_img" href="{{ tw.url }}">
-                <img class="rasipi-imgs" src={{ tw.img_src }}>
-            </a>
-        </div>
-        <div class=rasipi_comant_box">
-            <div class="rasipi_commant">
-                ${comment}
-            </div>
-            <div class="name_box">
-                <img class="name_img" src={{ tw.img_src }}> "${name}"
-            </div>
-            <div class="rasipi_poot_box">
+        {% for tw in tweet %}
+            <li class="rasipi_li_list">
+                <div class="rasipi_img_box">
+                    <a class="rasipi_img" href="/detail/{{ tw.id }}">
+                        <img class="rasipi-imgs" src={{ tw.img_src }}>
+                    </a>
+                </div>
+                <div class=rasipi_comant_box">
+                    <div class="rasipi_commant">
+                        {{ tw.title }}
+                    </div>
+                    <div class="name_box">
+                        <img class="name_img" src={{ tw.img_src }}> "${name}"
+                    </div>
+                    <div class="rasipi_poot_box">
                                 <span class="heart_box">
                                     <img style="width: 14px; margin: 0; " src=../static/img/like@4x.png>
                                     공감수
                                 </span>
-                <span class="heart_count"> ${like}   </span>
-            </div>
-        </div>
-    </li>
-    {% endfor %}
+                        <span class="heart_count"> ${like}   </span>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
     </div>
 
 
-    <div class="main-container">
+    <div class="main-container" >
         <h1 id="recommend">회원님을 위한 추천 메뉴</h1>
         <div class="box">
             <a href=""><p id="name">이름 넣는 곳</p><img src="" alt="1"></a>
