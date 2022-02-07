@@ -41,8 +41,8 @@
 <div class="container right-panel-active">
 	<!-- Sign Up -->
 	<div class="container__form container--signup">
-        <form action="/sign-up/" method="post" id="sign_up_form">
-            <div class="sign">
+        <form action="/sign-up/" method="post">
+            <div class="sign" id="sign_up_form">
                 {% csrf_token %}
                 <h2 class="up_title">회원가입</h2>
                 <input type="text" placeholder="ID" class="input" name="username">
@@ -61,8 +61,8 @@
 
 	<!-- Sign In -->
 	<div class="container__form container--signin">
-        <form action="/sign-in/" method="post" id="sign_in_form">
-            <div class="sign">
+        <form action="/sign-in/" method="post">
+            <div class="sign" id="sign_in_form">
                 {% csrf_token %}
                 <h2 class="up_title">로그인</h2>
                 <input type="text" placeholder="ID" class="input" name="username">
