@@ -85,3 +85,5 @@ def delete_comment(request, id):
     tweet_comment.delete()
     return redirect(f'/detail/{current_tweet}')
 
+def mypage(request):
+    return render(request, 'mypage.html')
