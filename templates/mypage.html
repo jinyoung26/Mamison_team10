@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Mypage{% endblock %}
+
+{% block head %}
+
+ <link rel='stylesheet' href="{% static 'css/mypage.css' %}" media='screen'>
+<script src="/static/js/mypage.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+        <div class="main-header">
+            <div id="logo" OnClick="location.href ='/main'" style="cursor:pointer;"><img src="../static/img/logo.png" alt="Logo Image"></div>
+            <nav id="left-nav">
+                <a href="">홈</a>
+                <a href="">아침</a>
+                <a href="">점심</a>
+                <a href="">저녁</a>
+                <a href="">디저트</a>
+            </nav>
+            <nav id="right-nav">
+                <a href="#">🔍</a>
+                <a href="/">Logout</a>
+            </nav>
+        </div>
+    </div>
+
+<div id="header">
+    <h1 id="title">찜한 레시피 🍽️</h1>
+</div>
+<div class="container">
+    <div class="container-box">
+        <div class="filter_tab">
+            <ul class="category">
+                <li id="list">
+                    <a href="javascript:void(0);" class="filter-button active" data-filter="all">All</a>
+                </li>
+                <li id="list">
+                    <a href="javascript:void(0);" class="filter-button" data-filter="밑반찬">밑반찬</a>
+                </li>
+                <li id="list">
+                    <a href="javascript:void(0);" class="filter-button" data-filter="찌개">찌개</a>
+                </li>
+                <li id="list">
+                    <a href="javascript:void(0);" class="filter-button" data-filter="메인반찬">메인반찬</a>
+                </li>
+                <li id="list">
+                    <a href="javascript:void(0);" class="filter-button" data-filter="야식">야식</a>
+                </li>
+                <li id="list">
+                    <a href="javascript:void(0);" class="filter-button" data-filter="디저트">디저트</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="saved_list">
+            <div class="category filter 야식">
+                <a href=""><img id="food-img" src="" alt="1"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 메인반찬">
+                <a href=""><img id="food-img" src="" alt="2"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 메인반찬">
+                <a href=""><img id="food-img" src="" alt="3"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 야식">
+                <a href=""><img id="food-img" src="" alt="4"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 찌개">
+                <a href=""><img id="food-img" src="" alt="5"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 디저트">
+                <a href=""><img id="food-img" src="" alt="6"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 메인반찬">
+                <a href=""><img id="food-img" src="" alt="7"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 디저트">
+                <a href=""><img id="food-img" src="" alt="8"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 밑반찬">
+                <a href=""><img id="food-img" src="" alt="9"></a>
+                <p>이름</p>
+            </div>
+
+            <div class="category filter 밑반찬">
+                <a href=""><img id="food-img" src="" alt="10"></a>
+                <p>이름</p>
+            </div>
+        </div>
+    </div>
+</div>
+ {% endblock %}
