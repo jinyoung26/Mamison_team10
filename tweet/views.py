@@ -125,4 +125,17 @@ def comment_like(request,id):
 
 
 def mypage(request):
-    return render(request, 'mypage.html')
+
+    like=tweetmodel.objects.filter(like =request.user)
+
+    td=[]
+    for a in like:
+        # like_count = tweetmodel.objects.filter(like=a.id)
+        td+={a}
+        # ff=[]
+        # ff+={like_count}
+        print("----------")
+        # print(ff)
+        print(td)
+
+    return render(request, 'mypage.html',{"like": td})

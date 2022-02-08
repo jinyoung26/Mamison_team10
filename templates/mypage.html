@@ -55,55 +55,57 @@
         </div>
 
         <div class="saved_list">
+            {% for lik in  like%}
             <div class="category filter 야식">
-                <a href=""><img id="food-img" src="" alt="1"></a>
-                <p>이름</p>
+                <a href=""><img id="food-img" src={{ lik.img_src }} alt="1"></a>
+                <p>{{ lik.title }}</p>
             </div>
+            {% endfor %}
 
-            <div class="category filter 메인반찬">
-                <a href=""><img id="food-img" src="" alt="2"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 메인반찬">
-                <a href=""><img id="food-img" src="" alt="3"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 야식">
-                <a href=""><img id="food-img" src="" alt="4"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 찌개">
-                <a href=""><img id="food-img" src="" alt="5"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 디저트">
-                <a href=""><img id="food-img" src="" alt="6"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 메인반찬">
-                <a href=""><img id="food-img" src="" alt="7"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 디저트">
-                <a href=""><img id="food-img" src="" alt="8"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 밑반찬">
-                <a href=""><img id="food-img" src="" alt="9"></a>
-                <p>이름</p>
-            </div>
-
-            <div class="category filter 밑반찬">
-                <a href=""><img id="food-img" src="" alt="10"></a>
-                <p>이름</p>
-            </div>
+{#            <div class="category filter 메인반찬">#}
+{#                <a href=""><img id="food-img" src="" alt="2"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 메인반찬">#}
+{#                <a href=""><img id="food-img" src="" alt="3"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 야식">#}
+{#                <a href=""><img id="food-img" src="" alt="4"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 찌개">#}
+{#                <a href=""><img id="food-img" src="" alt="5"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 디저트">#}
+{#                <a href=""><img id="food-img" src="" alt="6"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 메인반찬">#}
+{#                <a href=""><img id="food-img" src="" alt="7"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 디저트">#}
+{#                <a href=""><img id="food-img" src="" alt="8"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 밑반찬">#}
+{#                <a href=""><img id="food-img" src="" alt="9"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
+{##}
+{#            <div class="category filter 밑반찬">#}
+{#                <a href=""><img id="food-img" src="" alt="10"></a>#}
+{#                <p>이름</p>#}
+{#            </div>#}
         </div>
     </div>
 </div>
