@@ -47,8 +47,19 @@
                 <p>{{ tweet.ing}}</p>
             </div>
             <div class="like-box">
+                    {% if user in tweet.like %}
+                        <a href="/tweet/comment/like/{{ tweet.id }}">
+                            <img class ="like-box-img" src="../static/img/like3@3x.png">
+                        </a>
+                    {% else %}
+                        <a href="/tweet/comment/like/{{ tweet.id }}">
+                             <img class ="like-box-img" src="../static/img/like@3x.png">
+                        </a>
+
+                    {% endif %}
                 <img src="/static/img/like@3x.png"
                      onclick="this.src=this.src.match(/like@3x/)?'../static/img/like3@3x.png':'../static/img/like@3x.png';">
+
                 <span>{{ tag }}</span>
                 <button id="cart-btn">댓글</button>
             </div>
@@ -57,66 +68,23 @@
 
     <div>
 
-{#        {% for tw in comment %}#}
-{#            <div class="col-md-12 mb-2">#}
-{#                <div class="card">#}
-{#                    <div class="card-body">#}
-                        {#                                삭제기능#}
-                        {#                                지금 로그인 된유저가 쓴 글이라면 삭제 버튼도 보여줌#}
-{#                        {% if tw.author == user %}#}
-{#                            <div style="text-align: right">#}
-{#                                <a href="/tweet/delete/{{ tw.id }}">#}
-{#                                    <span class="badge rounded-pill bg-danger">삭제</span>#}
-{#                                </a>#}
-{#                            </div>#}
-{#                        {% endif %}#}
-                        {#                                작성한 사람이 아니라면 보기 버튼만 보여줌#}
-{#                        <div style="text-align: right">#}
-{#                            <a href="/tweet/{{ tw.id }}">#}
-{#                                <span class="badge rounded-pill bg-success">보기</span>#}
-{#                            </a>#}
-{#                        </div>#}
-{##}
-{#                        <div class="media">#}
-{#                            <div class="media-body">#}
-{#                                <h5 class="mt-0">{{ tw.content }}</h5>#}
-{#                                {% if tw.tags.all %}#}
-{#                                    {% for tag in tw.tags.all %}#}
-{#                                        <a style="text-decoration: none"#}
-{#                                           href="{% url 'tagged_object_list' tag.name %}">#}
-{#                                                    <span class="badge rounded-pill bg-success">#}
-{#                                                        {{ tag.name }}#}
-{#                                                    </span>#}
-{#                                        </a>#}
-{#                                    {% endfor %}#}
-{#                                    -<a style="text-decoration: none"#}
-{#                                        href="{% url 'tag_cloud' %}">TagCloud</a>#}
-{#                                {% endif %}#}
-{#                            </div>#}
-{#                            <div style="text-align: right">#}
-{#                                <span style="font-size: small">{{ tw.author.username }}-{{ tw.created_at|timesince }} 전</span>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        {% endfor %}#}
     </div>
     </main>
-    {% for tw in comment %}
+    {% for ul in  comment%}
         <div class=commant-contain>
             <div class="commant-div">
                 <div class="commant-main">
-                    <div class="line">{{ tw.comment }}
+                    <div class="line">{{ ul.comment }}
                     </div>
                 </div>
                 <div class="left-div">
-                    <div class="id-box">{tw.id} </div>
+                    <div class="id-box"> {{ ul.author }}</div>
                     <div class="button-box">
-                        {% if tw.author == user %}
+                        {% if ul.author == user %}
                             <button class="delete-button" onclick=location.href="/tweet/delete/{{ tw.id }}">삭제</button>
-                        {% endif %}
+                        {% else %}
                         <button class="create-button">수정</button>
+                        {% endif %}
                     </div>
 
                 </div>
@@ -127,7 +95,7 @@
     <form action="comment/{{ tweet.id }}" method="post">
     {% csrf_token %}
         {% if error %}
-            <div class="alert alert-danger" role="alert">
+            <div role="alert" class="commant-div">
                 {{ error }}
             </div>
         {% endif %}
@@ -135,6 +103,7 @@
             <div class="commant-footer">
                 <input type="text"  name="comment" class="text_area" placeholder="댓글을 입력하세요">
                 <button class="insert_button">입력</button>
+
             </div>
         </div>
     </form>
