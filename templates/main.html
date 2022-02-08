@@ -36,57 +36,11 @@
     <div id="main-header-image">
 
         <img id="mamiy-image" src="../static/img/mamiy_charic.png">
-
-
     </div>
 
 
-    {#        <div id="message">#}
-    {#            MommySon comment 넣기 <br> 현두님의 마미손 활용 기대합니다!#}
-    {#        </div>#}
-    <!-- END OF HEADER -->
-
-    <!-- MAIN CONTAINER -->
-    {###########################################레시피 자바스크립트##########################################}
-    {#    <div id= "rasipi_container">#}
-    {#        {% for img in alllist %}#}
-    {#            <li class ="rasipi_li_list">#}
-    {#                        <div class = "rasipi_img_box">#}
-    {#                            <a class ="rasipi_img">#}
-    {#                                  <img class ="rasipi-imgs" src = {{ img.imgs}}>#}
-    {##}
-    {#                            </a>#}
-    {#                        </div>#}
-    {#                        <div class =rasipi_comant_box">#}
-    {#                            <div class="rasipi_commant">#}
-    {#                                {{ img.imglink}}#}
-    {#                           </div>#}
-    {#                           <div class = "name_box">#}
-    {#                                <img class ="name_img" src =../static/img/mamiy_charic.png >#}
-    {#                           </div>#}
-    {#                           <div class="rasipi_poot_box">#}
-    {#                                <span class ="heart_box" >#}
-    {#                                    <img  style="width: 14px; margin: 0; " src=../static/img/mamiy_charic.png>#}
-    {#                                    공감수#}
-    {#                                </span>#}
-    {#                                <span class ="heart_count">#}
-    {#                                        ${like}#}
-    {#                                </span>#}
-    {##}
-    {#                           </div>#}
-    {##}
-    {#                        </div>#}
-    {##}
-    {#                        </div>#}
-    {##}
-    {##}
-    {#                </li>#}
-    {##}
-    {#        {% endfor %}#}
-    {#    </div>#}
-    {#    #########################################################}
-
-
+<div id ="contain">
+<div id="fillter-contain">
     <div class="cate_list" role="tablist">
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat4','전체')" class="active">전체</a> <a aria-selected="false"  role="tab"
             href="javascript:goSearchRecipe('cat4','밑반찬')">밑반찬</a>
@@ -144,6 +98,40 @@
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','67')">굽기</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','39')">데치기</a>
         <a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','37')">회</a><a aria-selected="false"  role="tab" href="javascript:goSearchRecipe('cat1','11')">기타</a>
     </div>
+</div>
+ <div id ="userbox">
+              {{ user.username }}님 반갑습니다.
+     <a class="rasipi-like">좋아하는 레시피</a>
+ </div>
+
+</div>
+    <div id="my-rasipi-container">
+    <li class ="rasipi_li_list">
+        <div style="text-align: center;">마미추천 레시피</div>
+        <div class="rasipi_img_box">
+            <img class="rasipi_imgs" src="../static/img/mamiy_charic.png">
+        </div>
+        <div style="text-align: center;">마음에 들었으면 좋겠다이</div>
+    </li>
+     {% for t in like %}
+            <li class="rasipi_li_list">
+                <div class="rasipi_img_box">
+                    <a class="rasipi_img" href="/detail/{{ t.id }}">
+                        <img class="rasipi-imgs" src={{ t.img_src }}>
+                    </a>
+                </div>
+                <div class=rasipi_comant_box">
+                    <div class="rasipi_commant">
+                        {{ t.title }}
+                    </div>
+                    <div class="name_box">
+                        <img class="name_img" src={{ t.img_src }}> {{ t.tag }}
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+
+    </div>
     <div id="rasipi_container">
         {% for tw in tweet %}
             <li class="rasipi_li_list">
@@ -157,14 +145,7 @@
                         {{ tw.title }}
                     </div>
                     <div class="name_box">
-                        <img class="name_img" src={{ tw.img_src }}> "${name}"
-                    </div>
-                    <div class="rasipi_poot_box">
-                                <span class="heart_box">
-                                    <img style="width: 14px; margin: 0; " src=../static/img/like@4x.png>
-                                    공감수
-                                </span>
-                        <span class="heart_count"> ${like}   </span>
+                        <img class="name_img" src={{ tw.img_src }}> {{ tw.tag }}
                     </div>
                 </div>
             </li>
@@ -183,6 +164,7 @@
             <a href=""><img src="" alt="6"></a>
             <a href=""><img src="" alt="7"></a>
         </div>
+
 
         <h1 id="sort">종류별</h1>
         <div class="box">
