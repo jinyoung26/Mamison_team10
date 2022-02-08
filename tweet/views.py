@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import  tweetmodel, tweetcommant ,UserModel
+from .models import  tweetmodel, tweetcommant
 from django.http import JsonResponse
 from django.views import View
 from django.contrib.auth.decorators import login_required  ## 함수위에 붙어있음 로근인이 되어있어야 실행가능
@@ -123,3 +123,6 @@ def comment_like(request,id):
 
 
 
+
+def mypage(request):
+    return render(request, 'mypage.html')

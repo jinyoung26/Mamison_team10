@@ -5,17 +5,46 @@
 {% block head %}
 
     <link rel='stylesheet' href="{% static 'css/signin.css' %}" media='screen'>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"
+            integrity="sha256-00Fh8tkPAe+EmVaHFpD+HovxWk7b97qwqVi7nLvjdgs=" crossorigin="anonymous"></script>
 
 {% endblock %}
 
 {% block main %}
+    <!-- Loading 화면 코드 시작 -->
+
+    <style>
+        #load {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            display: block;
+            opacity: 0.8;
+            background: white;
+            z-index: 99;
+            text-align: center;
+        }
+
+        #load > img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 100;
+        }
+    </style>
+    <div id="load">
+        <img src="/static/img/mamiy_charic.png" alt="loading">
+    </div> <!-- Loading 화면 코드 종료-->
+
 <div class="container right-panel-active">
 	<!-- Sign Up -->
-    <div class="container__form container--signup">
+	<div class="container__form container--signup">
         <form action="/sign-up/" method="post">
-            <div class="form" id="sign_up_form">
+            <div class="sign" id="sign_up_form">
                 {% csrf_token %}
-                <h2 class="form__title">회원가입</h2>
+                <h2 class="up_title">회원가입</h2>
                 <input type="text" placeholder="ID" class="input" name="username">
                 <input type="email" placeholder="email" class="input" name="email">
                 <input type="password" placeholder="Password" class="input" name="password">
@@ -27,27 +56,27 @@
                 {% endif %}
                 <button type="submit" class="btn">Sign Up</button>
             </div>
-        </form>
-    </div>
+		</form>
+	</div>
 
-    <!-- Sign In -->
-    <div class="container__form container--signin">
+	<!-- Sign In -->
+	<div class="container__form container--signin">
         <form action="/sign-in/" method="post">
-            <div class="form" id="sign_in_form">
+            <div class="sign" id="sign_in_form">
                 {% csrf_token %}
-                <a><h2 class="form__title">로그인</h2></a>
+                <h2 class="up_title">로그인</h2>
                 <input type="text" placeholder="ID" class="input" name="username">
                 <input type="password" placeholder="Password" class="input" name="password">
-                <a href="/password_reset/" class="link">Forgot your password?</a>
-                {% if error %}
+                {% if error2 %}
                     <div class="alert alert-danger" role="alert">
-                        {{ error }}
+                        {{ error2 }}
                     </div>
                 {% endif %}
+                <a href="/password_reset/" class="link">Forgot your password?</a>
                 <button type="submit" class="btn">Sign In</button>
             </div>
         </form>
-    </div>
+	</div>
 
 	<!-- Overlay -->
 	<div class="container__overlay">
@@ -63,7 +92,10 @@
 </div>
 
 {#자바스크립트의 기본 위치는 js 파일에 따로 넣지않는 이상 무조건 최 하단에 위치하는게 맞다!#}
-<script src="{% static 'js/signin.js' %}"></script>
+<script src="/static/js/signin.js"></script>
+<script type="text/javascript"> $(window).on('load', function () {
+        $("#load").hide();
+    });</script>
 
 </div>
 {% endblock %}

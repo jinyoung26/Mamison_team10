@@ -13,7 +13,11 @@ def intro(request):
 
 def sign_up_view(request):
     if request.method == 'GET':
-        return redirect('/sign-in')
+        user = request.user.is_authenticated
+        if user:
+            return redirect('/main')
+        else:
+            return render(request, 'user/signin.html')
     elif request.method == 'POST':
         email = request.POST.get('email', '')
         username = request.POST.get('username', '')
@@ -22,7 +26,7 @@ def sign_up_view(request):
         # bio = request.POST.get('bio', '')
 
         if email == '' or username == '' or password == '':
-            return render(request, 'user/signup.html', {'error': '빈 칸에 내용을 입력해 주세요!'})
+            return render(request, 'user/signin.html', {'error': '빈 칸에 내용을 입력해 주세요!'})
         else:
             if not(6 < len(password) < 21):
                 return render(request, 'user/signin.html', {'error': 'password 길이는 7~20자 입니다.'})
@@ -43,17 +47,13 @@ def sign_up_view(request):
                 return render(request, 'user/signin.html', {'error': '이미 사용 중인 ID입니다.'})
             else:
                 UserModel.objects.create_user(email=email, username=username, password=password, bio=bio)
-                return redirect('/sign-in')
+                return render(request, 'user/signin.html', {'error': '회원가입 완료 !'})
 
 
 
 def sign_in_view(request):
     if request.method == 'GET':
-        user = request.user.is_authenticated
-        if user:
-            return redirect('/main')
-        else:
-            return render(request, 'user/signin.html')
+        return redirect('/sign-up')
     elif request.method == 'POST':
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
@@ -63,7 +63,7 @@ def sign_in_view(request):
             auth.login(request, true_user)
             return redirect('/main')
         else:
-            return render(request, 'user/signin.html', {'error': ' ID 또는 패스워드를 확인해주세요!'})
+            return render(request, 'user/signin.html', {'error2': ' ID 또는 패스워드를 확인해주세요!'})
 
 
 def accounts_login(request):
