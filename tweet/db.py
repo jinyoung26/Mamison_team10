@@ -10,6 +10,7 @@ from user.models import  UserModel
 with open('../static/model/rcp_data_8888_v66.csv','rt',encoding='UTF8') as f:
     dr = csv.DictReader(f)
     s = pd.DataFrame(dr)
+
 ss = []
 user=UserModel.objects.get(username="bbb6045")
 
