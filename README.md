@@ -1,6 +1,6 @@
 # mommyson_team10
 ## NETFLIX Clone Coding
-![GitHub last commit](https://img.shields.io/github/last-commit/jinyoung26/mamison_team10?color=blue&style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/jinyoung26/mamison_team10?color=FF6347&style=plastic)
 
 <h2><a href="https://github.com/jinyoung26/mamison_team10/wiki/Project"> 📅 계획 </a></h2>
 
@@ -18,4 +18,5 @@
 <ul>
 <li><a href="https://github.com/jinyoung26/mamison_team10/wiki/Contributor"> 팀원 소개 </a></li>
 <li><a href="https://github.com/jinyoung26/mamison_team10/wiki/Team-Rule"> 팀 약속 </a></li>
+<li><a href="https://github.com/jinyoung26/mamison_team10/wiki/KPT"> KPT </a></li>
 </ul>
