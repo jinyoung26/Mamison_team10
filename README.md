@@ -21,4 +21,9 @@
 <li><a href="https://github.com/jinyoung26/mamison_team10/wiki/KPT"> KPT </a></li>
 </ul>
 
-<h3><a href="https://www.youtube.com/watch?v=AZf0qXK1cyg"> 🎞 시연영상 </a></h3>
+<h2> 💡 Data</h2>
+<ul>
+<li><a href="https://colab.research.google.com/drive/1bXQGPbn0ozlf8L-UsncBviCVJGEg63LH?usp=sharing"> 추천 시스템 </a></li>
+<li><a href="https://colab.research.google.com/drive/1aaDpY8npsLSTunlliCoEVEkHK11xdcAC?usp=sharing"> 크롤링 </a></li>
+<li><a href="https://www.youtube.com/watch?v=AZf0qXK1cyg"> 🎞 시연영상 </a></li>
+</ul>
