@@ -105,6 +105,12 @@
     align-items: center;
 }
 
+#userbox a{
+    color: white;
+    text-decoration: none;
+    margin: 2px;
+}
+
 #right-nav {
     grid-area: c;
     padding: 0 40px 0 40px;
@@ -127,6 +133,35 @@
 /*  font-weight: bold;*/
 /*  font-size: x-large;*/
 /*}*/
+
+#categorical{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#filter_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+}
+
+#contain {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+}
+#fillter-contain{
+    display: flex;
+    flex-flow: column;
+}
+
+.close_it{
+    place-items: center;
+}
+
 
 /* MAIN CONTIANER */
 .main-container {
@@ -348,7 +383,7 @@
     padding: 8px 0;
     line-height: 1;
     height: 41px;
-    margin-left: 100px;
+    margin-left: 40px;
 
 }
 
@@ -387,15 +422,7 @@
     line-height: 1;
     font-weight: 300;
 }
-#contain {
-    display: flex;
-    justify-content: space-between;
-}
-#fillter-contain{
-    display: flex;
-    flex-flow: column;
-    width: 1260px;
-}
+
 
 
 #my-rasipi-container{

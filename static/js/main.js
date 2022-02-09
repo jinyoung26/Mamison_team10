@@ -44,19 +44,32 @@ $(function () {
     window.addEventListener('scroll',
         function (e) {
             let scroll_position = window.scrollY;
-            if (scroll_position!==0) {
+            if (scroll_position !== 0) {
                 //console.log("wheel down");
                 headerContainer.style.background = '#f5b335';
                 headerContainer.style.transition = '0.5s';
 
-            }
-            else {
-               headerContainer.style.background = 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0))';
-               headerContainer.style.transition = '0.8s';
+
+            } else {
+                headerContainer.style.background = 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0))';
+                headerContainer.style.transition = '0.8s';
             }
         }
     );
 })
+
+//카테고리 열고 닫기
+function openClose() {
+    if ($("#categorical").is(":visible")) {
+        $("#categorical").hide();
+        $(".close_it").text("<< 카테고리 열기 >>");
+    } else {
+        $("#categorical").show();
+        $(".close_it").text("<< 카테고리 닫기 >>");
+    }
+
+}
+
 
 let url = "http://127.0.0.1:8000/main?tag=cat1,cat2,cat3,cat4";
 
