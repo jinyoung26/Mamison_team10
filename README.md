@@ -20,3 +20,5 @@
 <li><a href="https://github.com/jinyoung26/mamison_team10/wiki/Team-Rule"> 팀 약속 </a></li>
 <li><a href="https://github.com/jinyoung26/mamison_team10/wiki/KPT"> KPT </a></li>
 </ul>
+
+<h3><a href="https://www.youtube.com/watch?v=AZf0qXK1cyg"> 🎞 시연영상 </a></h3>
