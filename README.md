@@ -26,7 +26,7 @@
 <li> Contributor </li>
 
 - 곽주혁 (https://github.com/jh2277) : Front-end (인트로, 회원가입, 로그인 페이지 html/css/javascript)
-- 구현정 (https://github.com/KooHyunJung) : Back-end (회원가입, 로그인, 비밀번호 찾기 기능)
+- 구현정 (https://github.com/KooHyunJung) : Back-end (회원가입, 로그인, 비번 재설정 메일 전송, 로그아웃 기능)
 - 김현두 (https://github.com/Kimhyeondu) : Back-end (레시피 추천, 메인페이지 업로드, 좋아요, 댓글 기능)
 - 박진영 (https://github.com/jinyoung26) : Front-end (메인, 상세, 마이페이지 html/css/javascript)
 - 신동석 (https://github.com/dsshin99999) : AI (추천시스템, 크롤링)
